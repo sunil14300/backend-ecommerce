@@ -23,6 +23,9 @@ app.use(cors()); // First
 app.use(bodyParser.json()); // JSON Parser
 
 // ✅ API Routes
+app.get("/",(req,res)=>{
+    res.send("server running");
+})
 app.use('/auth', AuthRouter);
 app.get("/", mail);
 
